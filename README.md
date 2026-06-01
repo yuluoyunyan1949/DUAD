@@ -80,7 +80,7 @@ DUAD/
 ```
 
 ## 快速开始
-### 一、安装
+
 #### 1.克隆仓库：
 ```bash
 git clone https://github.com/yuluoyunyan1949/DUAD.git
@@ -91,7 +91,6 @@ cd DUAD
 conda create -n duad python=3.10
 conda activate duad
 ```
-
 
 #### 3.安装依赖
 ```bash
@@ -104,17 +103,17 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-### 二、补全项目结构
+### 5.补全项目结构
 - 根据README.md的项目结构部分手动补全部分目录（如saved_adv_samples），因为Github不支持上传空目录。
 - 检查cifar10数据集是否存在。若无，可在 https://www.cs.toronto.edu/~kriz/cifar.html 下载并解压在项目结构约定的位置
 - 检查模型定义文件及权重是否存在。若无，可在 https://github.com/chenyaofo/pytorch-cifar-models 下载，并将定义文件统一更名为“model.py”，权重文件统一更名为“mfiae_model.pt”保存在各自的目录中
 
-### 三、训练vmamba权重
+### 6.训练vmamba权重
 ```bash
 # 假设目前终端目前位于DUAD根目录，执行聚合脚本run即可开始训练
 python script/run.py
 ```
 
-### 四、使用
+### 7.尝试一下
 - script/目录下各脚本都可以直接执行
 - 若权重已训练完成，再次执行run脚本可打开图形操作界面
