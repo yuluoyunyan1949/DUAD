@@ -62,4 +62,4 @@ DUAD/
 ```
 
 ## 使用方式
-参考 DUAD/script/目录下的各个.py文件
+参考 DUAD/script/ 目录下各文件的内容
