@@ -2,6 +2,7 @@
 高迁移图像对抗样本检测算法
 
 ## 项目结构
+```markdown
 DUAD/
 ├── checkpoint/                 # 模型权重存放目录
 │   ├── mobileNetV2/            # 源模型权重 
@@ -44,47 +45,7 @@ DUAD/
 ├── README.md
 ├── requirements.txt            # 依赖管理
 └── simhei.ttf                  # 绘图时使用的中文字体文件
-
-
-**如果是在不支持等宽字体的地方（比如某些聊天软件）**，树形图可能会乱掉。那时可以改用**无序列表嵌套**，兼容性最强。例如：
-
-```markdown
-- DUAD/
-  - checkpoint/
-    - mobileNetV2/
-    - vmamba/
-    - repvgg/
-    - resnet20/
-    - shufflenetv2/
-    - vgg16_bn/
-  - dataset/
-    - cifar-10-batches-py/
-  - result/
-    - ablation/
-    - compare/
-    - robustness/
-  - saved_adv_samples/
-  - script/
-    - ablation.py
-    - motivation.py
-    - robustness.py
-    - run.py
-  - src/
-    - baselines/
-      - __init__.py
-      - mse.py
-      - ocsvm.py
-    - __init__.py
-    - attack_generator.py
-    - data_loader.py
-    - detector.py
-    - encoder.py
-    - gui.py
-    - trainer.py
-  - VMamba
-  - README.md
-  - requirements.txt
-  - simhei.ttf
+```
 
 ## 开发环境硬件信息
 ### GPU
