@@ -4,23 +4,23 @@
 [![GitHub](https://img.shields.io/badge/GitHub-yuluoyunyan1949-181717?logo=github)](https://github.com/yuluoyunyan1949)
 
 ## 开发环境
-### GPU
+#### GPU
 - 型号：NVIDIA GeForce RTX 5060 (Laptop)
 - 显存：8151 MiB（约 8 GB）
 - CUDA版本：12.8.61
 - 驱动版本：595.97
 
-### CPU
+#### CPU
 - 型号：Intel Core i9-14900HX
 - 物理核心数：16 核（32 线程）
 - 虚拟化环境：WSL2
 
-### 其他
+#### 其他
 - python 3.10.20
 - g++ 13.3.0
 
 
-## 项目结构
+#### 项目结构
 ```markdown
 DUAD/
 ├── checkpoint/                     # 模型权重存放目录
@@ -86,6 +86,7 @@ DUAD/
 git clone https://github.com/yuluoyunyan1949/DUAD.git
 cd DUAD
 ```
+
 #### 2.创建虚拟环境
 ```bash
 conda create -n duad python=3.10
@@ -103,17 +104,17 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-### 5.补全项目结构
+#### 5.补全项目结构
 - 根据README.md的项目结构部分手动补全部分目录（如saved_adv_samples），因为Github不支持上传空目录。
 - 检查cifar10数据集是否存在。若无，可在 https://www.cs.toronto.edu/~kriz/cifar.html 下载并解压在项目结构约定的位置
 - 检查模型定义文件及权重是否存在。若无，可在 https://github.com/chenyaofo/pytorch-cifar-models 下载，并将定义文件统一更名为“model.py”，权重文件统一更名为“mfiae_model.pt”保存在各自的目录中
 
-### 6.训练vmamba权重
+#### 6.训练vmamba权重
 ```bash
-# 假设目前终端目前位于DUAD根目录，执行聚合脚本run即可开始训练
+# 在DUAD根目录执行聚合脚本run即可开始训练，且训练完成后会自行启动GUI
 python script/run.py
 ```
 
-### 7.尝试一下
+#### 7.尝试一下
 - script/目录下各脚本都可以直接执行
 - 若权重已训练完成，再次执行run脚本可打开图形操作界面
