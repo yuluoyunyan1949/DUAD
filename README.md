@@ -23,47 +23,60 @@
 ## 项目结构
 ```markdown
 DUAD/
-├── checkpoint/                 # 模型权重存放目录
-│   ├── vmamba/                 # 无监督训练生成的权重
-│   ├── mobileNetV2/            # 高迁移图像对抗样本生成过程中用到的模型定义文件及权重
-│   ├── repvgg/                 # 同上
-│   ├── resnet20/               # 同上        
-│   ├── shufflenetv2/           # 同上
-│   └── vgg16_bn/               # 同上
+├── checkpoint/                     # 模型权重存放目录
+│   ├── vmamba/                     # 无监督训练生成的权重
+│   │    ├── best_model.pth         # 第二阶段最佳训练权重（最终使用这个）
+│   │    └── spatial_only_best.pth  # 第一阶段最佳训练权重
+│   │
+│   ├── mobileNetV2/                # 生成高迁移图像对抗集用到的模型（下面4个也是）
+│   │    ├── mfiae_model.pt         # 模型权重文件
+│   │    └── model.py               # 模型定义文件
+│   ├── repvgg/
+│   │    ├── mfiae_model.pt
+│   │    └── model.py
+│   ├── resnet20/
+│   │    ├── mfiae_model.pt
+│   │    └── model.py
+│   ├── shufflenetv2/
+│   │    ├── mfiae_model.pt
+│   │    └── model.py
+│   └── vgg16_bn/
+│        ├── mfiae_model.pt
+│        └── model.py
 │
 ├── dataset/
-│   └── cifar-10-batches-py/    # cifar10数据集
+│   └── cifar-10-batches-py/        # cifar10数据集
 │
-├── result/                     # 实验结果输出目录
+├── result/                         # 实验结果输出目录
 │   ├── ablation/
 │   ├── compare/
 │   └── robustness/
 │
-├── saved_adv_samples/          # 生成的对抗样本缓存目录
+├── saved_adv_samples/              # 生成的对抗样本缓存目录
 │
 ├── script/
-│   ├── ablation.py             # 消融实验
-│   ├── motivation.py           # 方向验证实验
-│   ├── robustness.py           # 鲁棒性实验
-│   └── run.py                  # 一键脚本
+│   ├── ablation.py                 # 消融实验
+│   ├── motivation.py               # 方向验证实验
+│   ├── robustness.py               # 鲁棒性实验
+│   └── run.py                      # 一键脚本
 │
 ├── src/
-│   ├── baselines/              # 基线方法实现
+│   ├── baselines/                  # 基线方法实现
 │   │   ├── __init__.py
-│   │   ├── mse.py              # MSE 重构误差检测
-│   │   └── ocsvm.py            # OC-SVM 隐空间异常检测
+│   │   ├── mse.py                  # MSE 重构误差检测
+│   │   └── ocsvm.py                # OC-SVM 隐空间异常检测
 │   ├── __init__.py
-│   ├── attack_generator.py     # 高迁移图像对抗样本生成器
-│   ├── data_loader.py          # CIFAR-10加载与预处理器
-│   ├── detector.py             # 图像对抗样本检测器
-│   ├── encoder.py              # DualDomainAE 双域自编码器模型定义
-│   ├── gui.py                  # 用户操作页面（Gradio实现）
-│   └── trainer.py              # 无监督训练器 & 检测阈值初始化
+│   ├── attack_generator.py         # 高迁移图像对抗样本生成器
+│   ├── data_loader.py              # CIFAR-10加载与预处理器
+│   ├── detector.py                 # 图像对抗样本检测器
+│   ├── encoder.py                  # DualDomainAE 双域自编码器模型定义
+│   ├── gui.py                      # 用户操作页面（Gradio实现）
+│   └── trainer.py                  # 无监督训练器 & 检测阈值初始化
 │
-├── VMamba                      # 克隆的VMamba仓库（有改动）
+├── VMamba                          # 克隆的VMamba仓库（有改动）
 ├── README.md
 ├── requirements.txt
-└── simhei.ttf                  # 绘图时使用的中文字体文件
+└── simhei.ttf                      # 绘图时使用的中文字体文件
 ```
 
 ## Start
