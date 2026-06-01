@@ -106,8 +106,8 @@ pip install -e .
 
 ### 二、补全项目结构
 - 根据README.md的项目结构部分手动补全部分目录（如saved_adv_samples），因为Github不支持上传空目录。
-- 检查cifar10数据集是否存在。若无，可在https://www.cs.toronto.edu/~kriz/cifar.html下载并解压在项目结构约定的位置
-- 检查模型定义文件及权重是否存在。若无，可在https://github.com/chenyaofo/pytorch-cifar-models下载，并将定义文件统一更名为“model.py”，权重文件统一更名为“mfiae_model.pt”保存在各自的目录中
+- 检查cifar10数据集是否存在。若无，可在 https://www.cs.toronto.edu/~kriz/cifar.html 下载并解压在项目结构约定的位置
+- 检查模型定义文件及权重是否存在。若无，可在 https://github.com/chenyaofo/pytorch-cifar-models 下载，并将定义文件统一更名为“model.py”，权重文件统一更名为“mfiae_model.pt”保存在各自的目录中
 
 ### 三、训练vmamba权重
 ```bash
