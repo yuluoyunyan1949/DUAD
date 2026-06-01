@@ -79,7 +79,7 @@ scikit-image==0.25.2
 scikit-learn==1.7.2
 scipy==1.15.3
 seaborn==0.13.2
--e git+https://github.com/MzeroMiko/VMamba.git@2ed52ead062a51a64521ed3871d52914bf532876#egg=selective_scan&subdirectory=kernels/selective_scan
+-e git+https://github.com/yuluoyunyan1949/DUAD.git@fd1b26f751f7b07017377176475dda7b78934623#egg=selective_scan&subdirectory=VMamba/kernels/selective_scan
 semantic-version==2.10.0
 shellingham==1.5.4
 six==1.17.0
