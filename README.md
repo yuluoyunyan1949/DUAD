@@ -55,7 +55,7 @@ DUAD/
 │   ├── gui.py                  # 用户操作页面（Gradio实现）
 │   └── trainer.py              # 无监督训练器 & 检测阈值初始化
 │
-├── VMamba                      # 克隆的VMamba仓库（改动版）
+├── VMamba                      # 克隆的VMamba仓库（有改动）
 ├── README.md
 ├── requirements.txt
 └── simhei.ttf                  # 绘图时使用的中文字体文件
