@@ -1,7 +1,7 @@
 ## DUAD
 高迁移图像对抗样本检测算法
 
-[![GitHub](https://img.shields.io/badge/GitHub-yuluoyunyan2024-181717?logo=github)](https://github.com/yuluoyunyan2024)
+[![GitHub](https://img.shields.io/badge/GitHub-yuluoyunyan1949-181717?logo=github)](https://github.com/yuluoyunyan1949)
 
 ## 开发环境硬件信息
 ### GPU
